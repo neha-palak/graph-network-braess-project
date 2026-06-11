@@ -21,26 +21,26 @@ This single command runs the full pipeline — data preprocessing, equilibrium a
 
 ---
 
-├── data/                         # Input datasets
-│   ├── SiouxFalls_net.tntp       # Original network file (TNTP format)
-│   ├── SiouxFalls_trips.tntp     # Original OD demand file
-│   ├── sioux_falls_net.csv       # Processed network (links, capacities, free-flow times)
-│   └── sioux_falls_trips.csv     # Processed OD matrix
+project/
+├── data/
+│   ├── SiouxFalls_net.tntp
+│   ├── SiouxFalls_trips.tntp
+│   ├── sioux_falls_net.csv
+│   └── sioux_falls_trips.csv
 │
-├── scripts/                      # Core implementation
-│   ├── run_all.py                # Main pipeline (executes full workflow end-to-end)
-│   ├── initial_equilibrium.py    # Preprocessing + Frank–Wolfe user equilibrium assignment
-│   └── edge_simulation.py        # Candidate edge generation and Braess effect detection
+├── scripts/
+│   ├── run_all.py
+│   ├── initial_equilibrium.py
+│   └── edge_simulation.py
 │
-├── outputs/                      # Generated automatically per run
-│   ├── traffic_log.txt           # Frank–Wolfe convergence details
-│   ├── braess_log.txt            # β-sweep experiment logs
-│   ├── summary.txt               # Key results (TTT, worst-case edge, etc.)
+├── outputs/
+│   ├── traffic_log.txt
+│   ├── braess_log.txt
+│   ├── summary.txt
 │   ├── initial_equilibrium_output.csv
-│   │                             # Link-level equilibrium flows
-│   └── beta_sweep_results.csv    # ΔTTT for each edge–β combination
+│   └── beta_sweep_results.csv
 │
-└── figures.ipynb                 # Visualization and result plots
+└── figures.ipynb
 
 
 ---
